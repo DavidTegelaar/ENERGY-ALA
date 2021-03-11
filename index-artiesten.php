@@ -9,7 +9,7 @@
     <meta name="author" content="David Tegelaar">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gainergy</title>
-    <link rel="stylesheet" type="text/css" href="css/Contact.css">
+    <link rel="stylesheet" type="text/css" href="css/Index-Artiesten.css">
 </head>
 
 <body>

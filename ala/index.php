@@ -26,7 +26,7 @@
                 <li><a href="#main-box3">Over ons</a></li>
                 <li><a href="#main-box3">Goede Doelen</a></li>
                 <li><a href="#main-box3">FAQ</a></li>
-                <li><a href="Contact.html">Contact<,/a></li>
+                <li><a href="Contact.html">Contact</li>
             </ul>
         </article>
 
@@ -34,10 +34,10 @@
 
     <main>
         <article class="Product_Slideshow">
-         <div class="w3-content w3-section" style="max-width:500px">
-           <img class="mySlides" src="pictures/Can Template Original Flavor.png" style="width:100%">
-           <img class="mySlides" src="pictures/Can Template Coffee.png" style="width:100%">
-           <img class="mySlides" src="pictures/Can Template Blueberry.png" style="width:100%">
+         <div class="SlideFoto" style="max-width:500px">
+           <img class="mySlide" src="pictures/Can Template Original Flavor.png" style="width:100%">
+           <img class="mySlide" src="pictures/Can Template Coffee.png" style="width:100%">
+           <img class="mySlide" src="pictures/Can Template Blueberry.png" style="width:100%">
          </div>
 
          <script>
@@ -53,9 +53,13 @@
         myIndex++;
         if (myIndex > x.length) {myIndex = 1}    
         x[myIndex-1].style.display = "block";  
-        setTimeout(carousel, 2500); // Change image every 2 seconds
+        setTimeout(carousel, 2500); // Change image every 2.5 seconds
         }
         </script>
+        </article>
+
+        <article class="Home-Evenementen">
+            
         </article>
 
 
@@ -73,7 +77,7 @@
         echo "verbinding mislukt";
     }
 
-    $sql = "SELECT plaatsnaam FROM locaties";
+    $sql = "SELECT datum FROM evenementen";
     if ($result = $conn->query($sql)) {
         while ($row = $result->fetch_row()) {
             echo "<section class='locatie'>" . $row[0] . "</section>";
