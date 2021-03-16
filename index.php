@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
     <header>
         <article class="item-logo">
             <img src="ala/pictures/logo.png" height="130" width="180">
@@ -26,40 +25,60 @@
                 <li><a href="Overons.html">Over ons</a></li>
                 <li><a href="GoedeDoelen.html">Goede Doelen</a></li>
                 <li><a href="FAQ.php">FAQ</a></li>
-                <li><a href="Contact.html">Contact</li>
+                <li><a href="Contact.html">Contact</a></li>
             </ul>
         </article>
+</header>
 
-    </header>
+
+<?php
+
+$host = "localhost";
+$user = "root";
+$pass = "";
+$database = "energy";
+$conn = new mysqli($host, $user, $pass, $database);
+if ($conn->connect_error) {
+    echo "verbinding mislukt";
+}
+
+$sql = "SELECT * FROM evenementen LEFT JOIN artiesten ON evenementen.artiest_id = artiesten.artiest_id LEFT JOIN locaties ON artiesten.artiest_id = locaties.locatie_id order by evenementen.datum LIMIT 0,3";
+if ($result = $conn->query($sql)) {
+    while ($row = $result->fetch_row()) {
+      ?>
+
+ <article class="evenementen">
+          <img src="ala/pictures/" alt="">
+          <h1><?php echo $row[1];?></h1>
+          <h1><?php echo $row[6];?></h1>
+
+        </article>
+
+<?php
+    } 
+
+}
+$result->close();
+$conn->close(); 
+
+?>
+       
 
 
 <div class="slideshow-container">
 
 <div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="ala/pictures/Can Template Original Flavor.png" style="width:50%">
-  <div class="text">Original</div>
+  <img src="ala/pictures/Can Template Original Flavor.png" style="padding-left: 8vw; width:50vw">
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="ala/pictures/Can Template Coffee.png" style="width:50%">
-  <div class="text">Coffee</div>
+  <img src="ala/pictures/Can Template Coffee.png" style="padding-left: 8vw; width: 50vw">
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="ala/pictures/Can Template Blueberry.png" style="width:50%">
-  <div class="text">Blueberry</div>
+  <img src="ala/pictures/Can Template Blueberry.png" style="padding-left: 8vw; width:50vw">
 </div>
 
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
 </div>
 
 <script>
@@ -84,32 +103,9 @@ function showSlides() {
 }
 </script>
 
-
-    <article class="Data_Locatie">
-    <?php  
-    $host = "localhost";
-    $user = "root";
-    $pass = "";
-    $database = "energy";
-    $conn = new mysqli($host, $user, $pass, $database);
-    if ($conn->connect_error) {
-        echo "verbinding mislukt";
-    }
-
-    $sql = "SELECT datum FROM evenementen order by datum LIMIT 0,3";
-    if ($result = $conn->query($sql)) {
-        while ($row = $result->fetch_row()) {
-            echo "<section class='locatie'>" . $row[0] . "</section>";
-        } 
-
-    }
-    $result->close();
-    $conn->close(); 
-    
-    
-    ?>
-        </article>
-    </main>
+<<div class="footer";>
+    <p>footer</p>
+  </div>
     
 
 </body>
