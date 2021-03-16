@@ -35,9 +35,9 @@
     <main>
         <article class="Product_Slideshow">
          <div class="SlideFoto" style="max-width:500px">
-           <img class="mySlide" src="pictures/Can Template Original Flavor.png" style="width:100%">
-           <img class="mySlide" src="pictures/Can Template Coffee.png" style="width:100%">
-           <img class="mySlide" src="pictures/Can Template Blueberry.png" style="width:100%">
+           <img class="mySlide" src="ala/pictures/Can Template Original Flavor.png" style="width:100%">
+           <img class="mySlide" src="ala/pictures/Can Template Coffee.png" style="width:100%">
+           <img class="mySlide" src="ala/pictures/Can Template Blueberry.png" style="width:100%">
          </div>
 
          <script>
@@ -66,7 +66,7 @@
 
 
 
-        <article class="Data_Locatie">
+    <article class="Data_Locatie">
     <?php  
     $host = "localhost";
     $user = "root";
@@ -77,23 +77,15 @@
         echo "verbinding mislukt";
     }
 
-    $sql = "SELECT datum FROM evenementen order by datum LIMIT 0,3";
+    /* $sql = "SELECT datum FROM evenementen order by datum LIMIT 0,3";
     if ($result = $conn->query($sql)) {
         while ($row = $result->fetch_row()) {
             echo "<section class='locatie'>" . $row[0] . "</section>";
-        }
+        } */
 
-    }
+    /* }
     $result->close();
-    $sql = "SELECT locatie_id FROM evenementen INNER JOIN locaties ON locaties.plaatsnaam = evenementen.locatie_id ORDER BY datum ASC; LIMIT 0,3";
-    if ($result = $conn->query($sql)) {
-        while ($row = $result->fetch_row()) {
-            echo "<section class='Plaats'>" . $row[0] . "</section>";
-        }
-
-    }
-    $result->close();
-    $conn->close();
+    $conn->close(); */
     
     
     ?>
