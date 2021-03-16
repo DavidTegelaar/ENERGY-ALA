@@ -85,7 +85,7 @@
 
     }
     $result->close();
-    $sql = "SELECT locatie_id FROM evenementen INNER JOIN locaties ON locatie.id = locaties.plaatsnaam ORDER BY datum ASC;";
+    $sql = "SELECT locatie_id FROM evenementen;";
     if ($result = $conn->query($sql)) {
         while ($row = $result->fetch_row()) {
             echo "<section class='Plaats'>" . $row[0] . "</section>";
