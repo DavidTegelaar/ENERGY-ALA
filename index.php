@@ -77,10 +77,18 @@
         echo "verbinding mislukt";
     }
 
-    $sql = "SELECT datum FROM evenementen";
+    $sql = "SELECT datum FROM evenementen order by datum LIMIT 0,3";
     if ($result = $conn->query($sql)) {
         while ($row = $result->fetch_row()) {
             echo "<section class='locatie'>" . $row[0] . "</section>";
+        }
+
+    }
+    $result->close();
+    $sql = "SELECT locatie_id FROM evenementen INNER JOIN locaties ON locaties.plaatsnaam = evenementen.locatie_id ORDER BY datum ASC; LIMIT 0,3";
+    if ($result = $conn->query($sql)) {
+        while ($row = $result->fetch_row()) {
+            echo "<section class='Plaats'>" . $row[0] . "</section>";
         }
 
     }
