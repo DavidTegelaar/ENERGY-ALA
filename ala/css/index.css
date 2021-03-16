@@ -64,11 +64,4 @@
         flex-direction: column;
         justify-content: center;
     }
-    .Data_Locatie {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 30vw;
-        background-color: antiquewhite;
-    }
 }
