@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  
+
     <header>
         <article class="item-logo">
             <img src="pictures/logo.png" height="130" width="180">
@@ -22,10 +22,10 @@
         <article class="item_nav">
             <ul>
                 <li><a href="index.php">Homepage</a></li>
-                <li><a href="#main-box3">Product</a></li>
-                <li><a href="#main-box3">Over ons</a></li>
-                <li><a href="#main-box3">Goede Doelen</a></li>
-                <li><a href="#main-box3">FAQ</a></li>
+                <li><a href="Product.html">Product</a></li>
+                <li><a href="Overons.html">Over ons</a></li>
+                <li><a href="GoedeDoelen.html">Goede Doelen</a></li>
+                <li><a href="FAQ.php">FAQ</a></li>
                 <li><a href="Contact.html">Contact</li>
             </ul>
         </article>
