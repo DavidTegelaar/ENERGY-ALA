@@ -30,42 +30,7 @@
         </article>
 </header>
 
-
-<?php
-
-$host = "localhost";
-$user = "root";
-$pass = "";
-$database = "energy";
-$conn = new mysqli($host, $user, $pass, $database);
-if ($conn->connect_error) {
-    echo "verbinding mislukt";
-}
-
-$sql = "SELECT * FROM evenementen LEFT JOIN artiesten ON evenementen.artiest_id = artiesten.artiest_id LEFT JOIN locaties ON artiesten.artiest_id = locaties.locatie_id order by evenementen.datum LIMIT 0,3";
-if ($result = $conn->query($sql)) {
-    while ($row = $result->fetch_row()) {
-      ?>
-
- <article class="evenementen">
-          <img src="ala/pictures/" alt="">
-          <h1><?php echo $row[1];?></h1>
-          <h1><?php echo $row[6];?></h1>
-
-        </article>
-
-<?php
-    } 
-
-}
-$result->close();
-$conn->close(); 
-
-?>
-       
-
-
-<div class="slideshow-container">
+<!-- <div class="slideshow-container">
 
 <div class="mySlides fade">
   <img src="ala/pictures/Can Template Original Flavor.png" style="padding-left: 8vw; width:50vw">
@@ -101,9 +66,41 @@ function showSlides() {
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 2500); // Change image every 2 seconds
 }
-</script>
+</script> -->
 
-<<div class="footer";>
+<?php
+
+$host = "localhost";
+$user = "root";
+$pass = "";
+$database = "energy";
+$conn = new mysqli($host, $user, $pass, $database);
+if ($conn->connect_error) {
+    echo "verbinding mislukt";
+}
+
+$sql = "SELECT * FROM evenementen LEFT JOIN artiesten ON evenementen.artiest_id = artiesten.artiest_id LEFT JOIN locaties ON artiesten.artiest_id = locaties.locatie_id order by evenementen.datum LIMIT 0,3";
+if ($result = $conn->query($sql)) {
+    while ($row = $result->fetch_row()) {
+      ?>
+
+ <article class="evenementen">
+          <img src="ala/pictures/download.png" alt="evenement1">
+          <h1><?php echo $row[1];?></h1>
+          <h1><?php echo $row[6];?></h1>
+
+        </article>
+
+<?php
+    } 
+
+}
+$result->close();
+$conn->close(); 
+
+?>
+
+<div class="footer";>
     <p>footer</p>
   </div>
     

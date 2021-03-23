@@ -85,7 +85,7 @@
             height: 70vh;
             width: 24vw;
             border: solid black 2px;
-            background-color: white;
+            background-color: rgb(189, 178, 178);
         }
         .footer {
             padding: 2%;
