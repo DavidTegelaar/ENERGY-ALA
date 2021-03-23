@@ -30,7 +30,7 @@
         </article>
 </header>
 
-<button id="readArray">Array ophalen</button>
+<!-- <button id="readArray">Array ophalen</button>
  <div id="test" style="width:225px;height:335px;"></div>
 
 <script>
@@ -53,7 +53,7 @@ function slideShow(){
 }
 </script>
 
-<?php
+<!-- <?php -->
 
 $host = "localhost";
 $user = "root";
@@ -83,7 +83,7 @@ if ($result = $conn->query($sql)) {
 $result->close();
 $conn->close(); 
 
-?>
+?> -->
 
 <div class="footer";>
     <p>footer</p>
