@@ -30,43 +30,28 @@
         </article>
 </header>
 
-<!-- <div class="slideshow-container">
-
-<div class="mySlides fade">
-  <img src="ala/pictures/Can Template Original Flavor.png" style="padding-left: 8vw; width:50vw">
-</div>
-
-<div class="mySlides fade">
-  <img src="ala/pictures/Can Template Coffee.png" style="padding-left: 8vw; width: 50vw">
-</div>
-
-<div class="mySlides fade">
-  <img src="ala/pictures/Can Template Blueberry.png" style="padding-left: 8vw; width:50vw">
-</div>
-
-</div>
+<button id="readArray">Array ophalen</button>
+ <div id="test" style="width:225px;height:335px;"></div>
 
 <script>
-var slideIndex = 0;
-showSlides();
+var slideShowArray = ['Can Template Original Flavor.png','Can Template Coffee.png','Can Template Blueberry.png'];
+var index = 0;
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2500); // Change image every 2 seconds
+window.onload = function(){
+    test = document.getElementById("test");
+
+    setInterval(slideShow, 1000);
+
 }
-</script> -->
+
+function slideShow(){
+    test.style.backgroundImage = "url(./pictures/" + slideShowArray[index] + ")";
+    index++;
+    if(index == slideShowArray.lenght){
+        index = 0;
+    }
+}
+</script>
 
 <?php
 
@@ -84,7 +69,7 @@ if ($result = $conn->query($sql)) {
     while ($row = $result->fetch_row()) {
       ?>
 
- <article class="evenementen">
+ <article class="index-evenementen">
           <img src="ala/pictures/download.png" alt="evenement1">
           <h1><?php echo $row[1];?></h1>
           <h1><?php echo $row[6];?></h1>
