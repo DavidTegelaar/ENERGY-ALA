@@ -6,7 +6,7 @@
             padding: 0;
         }
         html {
-            background-color: rgb(18, 88, 219);
+            background-color: rgb(46, 105, 214);
         }
         body {
             width: 100vw;
@@ -59,28 +59,7 @@
         .item_nav a:hover {
             color: #1cbfd4;
         }
-        main article {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .locatie {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 30vw;
-            background-color: rgb(255, 255, 255);
-        }
-        img {
-            padding: 2%;
-        }
-        .slideshow-container {
-            max-width: 1000px;
-            position: relative;
-            margin: auto;
-        }
-        .evenementen {
+        .index-evenementen {
             display: inline-block;
             height: 70vh;
             width: 24vw;

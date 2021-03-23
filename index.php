@@ -45,7 +45,7 @@ window.onload = function(){
 }
 
 function slideShow(){
-    test.style.backgroundImage = "url(./pictures/" + slideShowArray[index] + ")";
+    test.style.backgroundImage = "url(ala/pictures/" + slideShowArray[index] + ")";
     index++;
     if(index == slideShowArray.lenght){
         index = 0;
