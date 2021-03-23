@@ -9,14 +9,14 @@
     <meta name="author" content="David Tegelaar">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gainergy</title>
-    <link rel="stylesheet" type="text/css" href="ala/css/Index-Artiesten.css">
+    <link rel="stylesheet" type="text/css" href="css/Index-Artiesten.css">
 </head>
 
 <body>
 
     <header>
         <article class="item-logo">
-            <img src="ala/pictures/logo.png" height="130" width="180">
+            <img src="pictures/logo.png" height="130" width="180">
         </article>
 
         <article class="item_nav">

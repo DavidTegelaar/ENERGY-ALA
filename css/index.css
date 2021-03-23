@@ -6,7 +6,7 @@
             padding: 0;
         }
         html {
-            background-color: rgb(46, 105, 214);
+            background-color: rgb(238, 244, 253);
         }
         body {
             width: 100vw;
@@ -60,11 +60,31 @@
             color: #1cbfd4;
         }
         .index-evenementen {
-            display: inline-block;
+            position: absolute;
+            top: 30vh;
+            left: 10vw;
             height: 70vh;
-            width: 24vw;
+            width: 50vw;
             border: solid black 2px;
-            background-color: white;
+            background-color: rgb(224, 205, 205);
+        }
+        .index-evenementen1 {
+            position: absolute;
+            top: 30vh;
+            left: 40vw;
+            height: 70vh;
+            width: 50vw;
+            border: solid black 2px;
+            background-color: rgb(238, 212, 212);
+        }
+        .index-evenementen2 {
+            position: absolute;
+            top: 30vh;
+            left: 60vw;
+            height: 70vh;
+            width: 50vw;
+            border: solid black 2px;
+            background-color: rgb(228, 200, 200);
         }
         .footer {
             padding: 2%;
